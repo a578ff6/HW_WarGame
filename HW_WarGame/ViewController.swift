@@ -434,6 +434,14 @@ class ViewController: UIViewController {
                         playerWonDeck.shuffle()
                         playerDeck.append(contentsOf: playerWonDeck)
                         playerWonDeck.removeAll()
+                        
+                        // 顯示手上的牌的數量
+                        playerWonCardAmount.text = "\(playerWonDeck.count)"
+                        computerWonCardAmount.text = "\(computerWonDeck.count)"
+                        playerHandCardAmount.text = "\(playerDeck.count)"
+                        computerHandCardAmount.text = "\(computerDeck.count)"
+                        computerWonCardImageView.image = nil
+                        print("最後一段檢查的手牌添加，玩家的牌\(playerDeck.count)，贏的牌\(playerWonDeck.count)")
                     }
                 }
 
@@ -451,6 +459,15 @@ class ViewController: UIViewController {
                         computerWonDeck.shuffle()
                         computerDeck.append(contentsOf: computerWonDeck)
                         computerWonDeck.removeAll()
+                        
+                        // 顯示手上的牌的數量
+                        playerWonCardAmount.text = "\(playerWonDeck.count)"
+                        computerWonCardAmount.text = "\(computerWonDeck.count)"
+                        playerHandCardAmount.text = "\(playerDeck.count)"
+                        computerHandCardAmount.text = "\(computerDeck.count)"
+                        computerWonCardImageView.image = nil                        
+                        print("最後一段檢查的手牌添加，電腦的牌\(computerDeck.count)，贏的牌\(computerWonDeck.count)")
+
                     }
                 }
 
